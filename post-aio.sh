@@ -12,9 +12,9 @@ cd /etc/haproxy/conf.d
 pwd
 ip_addr=$(ifconfig eth0 | grep "inet " | awk -F'[: ]+' '{ print $4 }')
 echo $ip_addd
-find . -type f -exec sed -i "s/104.239.240.212/$ip_addr/g" {} \;
+find . -type f -exec sed -i "s/162.242.209.102/$ip_addr/g" {} \;
 /etc/init.d/haproxy restart
 
 cd /etc/openstack_deploy
 pwd
-find . -type f -exec sed -i "s/104.239.240.212/$ip_addr/g" {} \;
+find . -type f -exec sed -i "s/162.242.209.102/$ip_addr/g" {} \;
